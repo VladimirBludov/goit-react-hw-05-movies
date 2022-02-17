@@ -24,17 +24,23 @@ export default function App() {
   return (
     <>
       <Routes basename="/goit-react-hw-05-movies/">
-        <Route path="/" element={<Layout />}>
+        <Route path="goit-react-hw-05-movies/" element={<Layout />}>
           <Route index element={<HomePage />} />
 
-          <Route path="movies" element={<MoviesPage />} />
+          <Route
+            path="goit-react-hw-05-movies/movies"
+            element={<MoviesPage />}
+          />
 
-          <Route path="movies/:movieId" element={<MovieDetailsPage />}>
+          <Route
+            path="goit-react-hw-05-movies/movies/:movieId"
+            element={<MovieDetailsPage />}
+          >
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
 
-          <Route path="*" element={<HomePage />} />
+          <Route path="goit-react-hw-05-movies/*" element={<HomePage />} />
         </Route>
       </Routes>
       <ToastContainer
