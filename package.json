@@ -38,8 +38,12 @@
     ]
   },
   "devDependencies": {
+    "axios": "^0.26.0",
     "modern-normalize": "^1.1.0",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
     "react-toastify": "^8.1.1",
+    "react-use": "^17.3.2",
     "styled-components": "^5.3.3"
   }
 }
