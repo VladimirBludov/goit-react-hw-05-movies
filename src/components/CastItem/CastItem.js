@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { Character, Item, Name, Poster } from './Actor.styles';
+import { Character, Item, Name, Poster } from './CastItem.styles';
 
-export default function Actor({ src, name, character }) {
+export default function CastItem({ src, name, character }) {
   return (
     <Item>
       <Poster src={src} />
@@ -15,7 +15,7 @@ export default function Actor({ src, name, character }) {
   );
 }
 
-Actor.propTypes = {
+CastItem.propTypes = {
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   character: PropTypes.string.isRequired,

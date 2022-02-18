@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import api from '../../services/movies-api';
 import MoviesList from 'components/MoviesList';
-import SearchForm from './SearchForm';
+import SearchForm from '../../components/SearchForm';
 import Loader from 'components/Loader';
 
 let source;

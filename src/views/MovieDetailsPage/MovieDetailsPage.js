@@ -3,7 +3,6 @@ import { useParams, useNavigate, Outlet, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import api from '../../services/movies-api.js';
-import AdditionalInfo from './AdditionalInfo';
 import {
   BackButton,
   Image,
@@ -11,7 +10,8 @@ import {
   Title,
   WrapperMovie,
 } from './MovieDetailsPage.styles.js';
-import Loader from 'components/Loader/Loader.js';
+import Loader from 'components/Loader';
+import AdditionalInfo from 'components/AdditionalInfo';
 
 let source;
 
@@ -19,8 +19,9 @@ export default function MovieDetailsPage() {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
-  const { movieId } = useParams();
   const navigate = useNavigate();
+  const { slug } = useParams();
+  const movieId = slug.match(/[a-z0-9]+$/)[0];
 
   const prevPage = useRef(location.state?.prevPath);
 

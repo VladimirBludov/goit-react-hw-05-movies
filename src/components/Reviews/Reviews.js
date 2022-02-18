@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import api from '../../services/movies-api.js';
-import ReviewItem from './ReviewItem';
+import ReviewItem from '../ReviewItem';
 import { ReviewList } from './Reviews.styles.js';
 import Loader from 'components/Loader';
 
@@ -12,7 +12,8 @@ let source;
 export default function Reviews() {
   const [reviews, setReviews] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const { movieId } = useParams();
+  const { slug } = useParams();
+  const movieId = slug.match(/[a-z0-9]+$/)[0];
 
   useEffect(() => {
     source = axios.CancelToken.source();

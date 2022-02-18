@@ -29,7 +29,7 @@ export default function App() {
 
           <Route path="movies" element={<MoviesPage />} />
 
-          <Route path="movies/:movieId" element={<MovieDetailsPage />}>
+          <Route path="movies/:slug" element={<MovieDetailsPage />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>

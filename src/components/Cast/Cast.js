@@ -3,16 +3,17 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import api from '../../services/movies-api.js';
-import Actor from './Actor';
 import { ActorList } from './Cast.styles.js';
 import Loader from 'components/Loader';
+import CastItem from '../CastItem';
 
 let source;
 
 export default function Cast() {
   const [cast, setCast] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const { movieId } = useParams();
+  const { slug } = useParams();
+  const movieId = slug.match(/[a-z0-9]+$/)[0];
 
   useEffect(() => {
     source = axios.CancelToken.source();
@@ -43,7 +44,7 @@ export default function Cast() {
     if (!cast) return;
 
     return cast.map(({ id, src, name, character }) => (
-      <Actor key={id} src={src} name={name} character={character} />
+      <CastItem key={id} src={src} name={name} character={character} />
     ));
   }, [cast]);
 
