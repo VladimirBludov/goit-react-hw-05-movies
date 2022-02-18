@@ -23,7 +23,7 @@ const Reviews = lazy(() =>
 export default function App() {
   return (
     <>
-      <Routes basename="/goit-react-hw-05-movies/">
+      <Routes>
         <Route path="goit-react-hw-05-movies/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />
 
