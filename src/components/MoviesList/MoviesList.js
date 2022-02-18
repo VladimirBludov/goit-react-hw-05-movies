@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import MoviesItem from '../MoviesItem';
+import MoviesItem from './MoviesItem';
 import { Container } from './MoviesList.styles';
 
 MoviesList.propTypes = {

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import api from '../../services/movies-api.js';
-import ReviewItem from '../ReviewItem';
+import ReviewItem from './ReviewItem';
 import { ReviewList } from './Reviews.styles.js';
 import Loader from 'components/Loader';
 
