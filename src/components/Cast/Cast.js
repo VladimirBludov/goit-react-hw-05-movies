@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import api from '../../services/movies-api.js';
 import { ActorList } from './Cast.styles.js';
 import Loader from 'components/Loader';
-import CastItem from './CastItem';
+import CastItem from 'components/CastItem';
 
 let source;
 
