@@ -25,7 +25,7 @@ export default function App() {
     <>
       <Routes basename="/goit-react-hw-05-movies/">
         <Route path="goit-react-hw-05-movies/" element={<Layout />}>
-          <Route index element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
 
           <Route path="movies" element={<MoviesPage />} />
 

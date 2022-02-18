@@ -21,10 +21,10 @@ export default function Header() {
           <Nav>
             <NavList>
               <NavItem>
-                <Link to="goit-react-hw-05-movies/">Home</Link>
+                <Link to="/">Home</Link>
               </NavItem>
               <NavItem>
-                <Link to="goit-react-hw-05-movies/movies">Movies</Link>
+                <Link to="/movies">Movies</Link>
               </NavItem>
             </NavList>
           </Nav>
