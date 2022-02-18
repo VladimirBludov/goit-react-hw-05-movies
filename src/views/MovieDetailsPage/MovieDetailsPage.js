@@ -55,7 +55,7 @@ export default function MovieDetailsPage() {
       return;
     }
 
-    navigate(-1);
+    navigate('/');
   };
 
   return (
