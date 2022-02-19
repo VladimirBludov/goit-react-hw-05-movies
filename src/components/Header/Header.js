@@ -7,8 +7,8 @@ import {
   Nav,
   Logo,
   Wrapper,
+  Link,
 } from './Header.styles';
-import CustomLink from 'components/CustomLink';
 
 export default function Header() {
   return (
@@ -21,10 +21,10 @@ export default function Header() {
           <Nav>
             <NavList>
               <NavItem>
-                <CustomLink to="">Home</CustomLink>
+                <Link to="/">Home</Link>
               </NavItem>
               <NavItem>
-                <CustomLink to="movies">Movies</CustomLink>
+                <Link to="/movies">Movies</Link>
               </NavItem>
             </NavList>
           </Nav>

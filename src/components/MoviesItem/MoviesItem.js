@@ -8,11 +8,9 @@ export default function MoviesItem({ id, title, srcImage, from }) {
       lower: true,
     });
 
-  const url = `/goit-react-hw-05-movies/movies/${makeSlag()}`;
-
   return (
     <Container>
-      <LinkStyled to={url} state={{ prevPath: from }}>
+      <LinkStyled to={`/movies/${makeSlag()}`} state={{ prevPath: from }}>
         <Image src={srcImage} alt={title} />
         <Title>{title}</Title>
       </LinkStyled>

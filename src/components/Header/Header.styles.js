@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
@@ -28,5 +29,12 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   &:not(:last-child) {
     margin-right: 15px;
+  }
+`;
+
+export const Link = styled(NavLink)`
+  color: white;
+  &.active {
+    color: gold;
   }
 `;
